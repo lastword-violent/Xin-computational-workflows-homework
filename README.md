@@ -146,7 +146,7 @@ git push -u origin master
    directory `/root/shared` into the container.
 
 ```
-# Add your commands here
+# docker run -ti -v $(pwd):/root/shared lastwordxin/homework
 ```
 
 3. Run the tests inside the container by going to `/root/shared` and running the
