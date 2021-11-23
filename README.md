@@ -86,6 +86,10 @@ RUN apt-get -y update && \
 # git add .
 # git commit -m "Xin"
 # git push origin main
+
+##
+git fetch origin master
+git merge origin master
 ```
 
 ## Build and push Docker image
@@ -126,6 +130,7 @@ latest: digest: sha256:5f3e8369ad4d27e2bb80666187109a0dc550d57bf1d5768bd076854c6
 % pwd
 /Users/xin.he/Desktop/2021_11_22_computational_workflows/Xin-computational-workflows-homework
 % docker run -ti -v $(pwd):/Users/xin.he/Desktop/2021_11_22_computational_workflows/Xin-computational-workflows-homework 7aea5ff01b
+% docker run -ti -v $(pwd):/root/shared lastwordxin/homework
 ```
 
 ## Setup a simple Python test suite
@@ -145,7 +150,7 @@ git push -u origin master
    directory `/root/shared` into the container.
 
 ```
-# Add your commands here
+# docker run -ti -v $(pwd):/root/shared lastwordxin/homework
 ```
 
 3. Run the tests inside the container by going to `/root/shared` and running the
