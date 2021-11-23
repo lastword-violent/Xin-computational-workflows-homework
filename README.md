@@ -93,7 +93,9 @@ RUN apt-get -y update && \
    `<yourdockerhubusername>/computational-workflows`.
 
 ```
-# Add your commands here
+% docker build .
+% docker login lastwordxin
+% docker push lastwordxin/computational-workflows
 ```
 
 ## Run a container, and share in files from the host.
