@@ -84,8 +84,8 @@ RUN apt-get -y update && \
 
 ```
 # git add .
-git commit -m "Bug Fixed"
-git push -u origin master
+# git commit -m "Xin"
+# git push origin main
 ```
 
 ## Build and push Docker image
