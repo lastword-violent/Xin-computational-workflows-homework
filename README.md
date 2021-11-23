@@ -94,8 +94,24 @@ RUN apt-get -y update && \
 
 ```
 % docker build .
+[+] Building 2.2s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                                                                 0.4s
+ => => transferring dockerfile: 44B                                                                                  0.0s
+ => [internal] load .dockerignore                                                                                    0.4s
+ => => transferring context: 2B                                                                                      0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:21.04                                                      1.4s
+ => [auth] library/ubuntu:pull token for registry-1.docker.io                                                        0.0s
+ => [1/2] FROM docker.io/library/ubuntu:21.04@sha256:26cd4ff32a9c031eaca3d6f589a7799f28b34a539e1bd81acbf1a6efeec4b1  0.0s
+ => CACHED [2/2] RUN apt-get -y update &&     apt-get install -y python3-minimal python3-ipython python3-pytest pyt  0.0s
+ => exporting to image                                                                                               0.1s
+ => => exporting layers                                                                                              0.0s
+ => => writing image sha256:7aea5ff01b453ce834548d89075e78baaaf827e3a9d0f7cba34036e723e51166                         0.0s
 % docker login lastwordxin
-% docker push lastwordxin/computational-workflows
+% docker tag 7aea5ff01b lastwordxin/homework:latest
+The push refers to repository [docker.io/lastwordxin/homework]
+6c4316bd8e6d: Pushed
+14636cce64ea: Mounted from lastwordxin/computational-workflows
+latest: digest: sha256:5f3e8369ad4d27e2bb80666187109a0dc550d57bf1d5768bd076854c6a657910 size: 740
 ```
 
 ## Run a container, and share in files from the host.
@@ -105,7 +121,9 @@ RUN apt-get -y update && \
    an interactive prompt inside the running container.
 
 ```
-# Add your commands here
+% pwd
+/Users/xin.he/Desktop/2021_11_22_computational_workflows/Xin-computational-workflows-homework
+% docker run -ti -v $(pwd):/Users/xin.he/Desktop/2021_11_22_computational_workflows/Xin-computational-workflows-homework 7aea5ff01b
 ```
 
 ## Setup a simple Python test suite
