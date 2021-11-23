@@ -136,7 +136,9 @@ latest: digest: sha256:5f3e8369ad4d27e2bb80666187109a0dc550d57bf1d5768bd076854c6
    repository.  ``git add``, ``git commit`` and ``git push`` them.
 
 ```
-# Add your commands here
+# git add .
+git commit -m "Bug Fixed"
+git push -u origin master
 ```
 
 2. Start a Docker container using your image and share your repository into a
