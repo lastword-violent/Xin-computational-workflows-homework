@@ -87,9 +87,6 @@ RUN apt-get -y update && \
 # git commit -m "Xin"
 # git push origin main
 
-##
-git fetch origin main
-git merge origin main
 ```
 
 ## Build and push Docker image
