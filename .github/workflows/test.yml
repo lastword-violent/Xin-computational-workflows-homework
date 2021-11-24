@@ -3,7 +3,7 @@ on: [push]
 jobs:
   tests:
     runs-on: ubuntu-20.04
-    container: <lastwordxin>/triangle:latest
+    container: <lastwordxin>/homework:latest
 
     steps:
       - name: Checkout code
