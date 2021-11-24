@@ -3,7 +3,7 @@ on: [push]
 jobs:
   tests:
     runs-on: ubuntu-20.04
-    container: <username>/triangle:latest
+    container: <lastword>/triangle:latest
 
     steps:
       - name: Checkout code
