@@ -141,11 +141,11 @@ git merge origin main
    ``test_wallet.py`` all pass.
 
 4. ``git add``, ``git commit`` and ``git push`` the working ``wallet.py`` file.
-
+```
 # git add .
 # git commit -m "modified .py file"
 # git push origin main
-
+```
 ## GitHub Actions for Continuous Integration
 
 1. Using the example in the class notes make a `.github/workflows/test.yml`
